@@ -6,8 +6,7 @@ const Component2Child = (props) => {
     <div className='component2-child'>
       <h3>Component2Child</h3>
       <button onClick={()=>{
-        props.dispatch({type: 'CHANGE_BACKGROUND'})
-      }}>Change Background</button>
+        props.dispatch({type: 'CHANGE_BACKGROUND'})}}>Change Background</button>
     </div>
   )
 }

@@ -17,6 +17,7 @@ const Component1 = (props) => {
 
 const mapStateProps = (state)=>{
   return {
+    
     bgColor: state.bgColor
   }
 }

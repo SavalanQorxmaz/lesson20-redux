@@ -7,7 +7,8 @@ import { createStore } from 'redux';
 // Baslangic deyerler obyekti
 const initialState = {
   count: 0,
-  bgColor: `rgb(255,255,255)`
+  bgColor: `rgb(255,255,255)`,
+  newValue: 'daxil edilecek metn',
 }
 
 
@@ -15,15 +16,18 @@ const initialState = {
 const store = createStore((state = initialState, action) => {
   switch(action.type){
     case 'INCREMENT': {
-      return {...state, count: state.count+1}
+      return {...state, count: state.count + 1}
     };
     case 'DECREMENT': {
       return {...state, count: state.count - 1}
     };
 
     case "CHANGE_BACKGROUND": {
-
       return {...state,bgColor: `rgb(${Math.ceil(Math.random() * 256-1)},${Math.ceil(Math.random() * 256-1)},${Math.ceil(Math.random() * 256-1)})`}
+    };
+
+    case "CHANGE_TEXT": {
+      return {...state, newValue: action.text}
     }
 
     default: return state
