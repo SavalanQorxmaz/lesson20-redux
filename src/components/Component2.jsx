@@ -1,5 +1,5 @@
 import React from 'react'
-import {Component2Child} from './Component2Child'
+import Component2Child from './Component2Child'
 
 const Component2 = () => {
   return (
@@ -11,4 +11,4 @@ const Component2 = () => {
 }
 
 
-export {Component2}
+export default Component2
